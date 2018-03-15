@@ -90,6 +90,7 @@ facebook = {
 	shareFB: function(url){
 		FB.ui({
 			method: 'share',
+			display: 'popup' 
 			mobile_iframe: true,
 			href: url?url:base_url,
 		}, function(response){			
