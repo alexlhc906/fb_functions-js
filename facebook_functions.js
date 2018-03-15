@@ -90,9 +90,23 @@ facebook = {
 	shareFB: function(url){
 		FB.ui({
 			method: 'share',
-			display: 'popup' 
+			display: 'popup',
+			hashtag: '#Hashtag',
+			quote: 'quote',
 			mobile_iframe: true,
 			href: url?url:base_url,
+		}, function(response){			
+		});
+	},
+
+	/* Feed
+	**	Open Feed fb 
+	*/
+	feedFB: function(url){
+		FB.ui({
+			method: 'feed',
+			link: 'https://developers.facebook.com/docs/',
+  			caption: 'An example caption',
 		}, function(response){			
 		});
 	},
